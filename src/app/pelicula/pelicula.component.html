@@ -1,0 +1,17 @@
+<div>
+    <a href={{pelicula.enlace}}>
+        <img src={{pelicula.img.src}} alt={{pelicula.img.alt}} />
+        <div *ngIf="destacado">
+            <h1>
+                {{pelicula.titulo}}
+            </h1>
+            <p *ngIf="destacado">{{pelicula.descripcion}}</p>
+        </div>
+        <div *ngIf="!destacado">
+            <h2>
+                {{pelicula.titulo}}
+            </h2>
+        </div>
+        <span>{{pelicula.fecha.toLocaleDateString()}}</span>
+    </a>
+    </div>
